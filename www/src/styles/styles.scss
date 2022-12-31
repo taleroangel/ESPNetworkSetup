@@ -1,0 +1,84 @@
+:root {
+	font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 24px;
+	text-align: center;
+	margin: 1em auto;
+	width: fit-content;
+
+	color-scheme: dark;
+	color: white;
+	background-color: $bg-primary;
+}
+
+.btn {
+	border: none;
+	background-color: $primary;
+	color: white;
+	text-decoration: none;
+	padding: 10px 25px;
+	border-radius: $def-radius;
+	cursor: pointer;
+}
+
+:disabled {
+	transition: background-color 0.5s ease;
+	background-color: rgba($color: $secondary, $alpha: 0.75);
+}
+
+input {
+	margin: 1em;
+	padding: 0.2em;
+}
+
+.list {
+	padding: 1em;
+	margin: 1em auto;
+	background-color: $bg-secondary;
+	border-radius: $def-radius;
+
+	max-height: 60vh;
+	overflow-y: scroll;
+
+	.label {
+		text-align: left;
+		padding: 0 1em;
+		margin: 1em 0;
+	}
+
+	.item {
+		cursor: pointer;
+		display: block;
+		border-radius: $def-radius;
+		padding: 15px;
+		transition: background-color 0.5s ease;
+		background-color: $bg-tertiary;
+		margin: 5px;
+
+		&.active {
+			transition: background-color 0.5s ease;
+			background-color: $secondary;
+		}
+	}
+}
+
+.alert-section {
+	padding: 0.5em;
+	border-radius: $def-radius;
+	line-height: 1em;
+	margin: 10px;
+}
+
+.error {
+	@extend .alert-section;
+	background-color: #700000;
+}
+
+.warning {
+	@extend .alert-section;
+	background-color: #705f00;
+}
+
+.success {
+	@extend .alert-section;
+	background-color: $secondary;
+}
