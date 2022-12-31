@@ -51,6 +51,8 @@ struct NetworkSetupDatabase
 	char password[32];
 };
 
+#define NETWORK_DATABASE_SIZE sizeof(NetworkSetupDatabase)
+
 class NetworkSetup
 {
 public:
@@ -92,7 +94,7 @@ private:
 
 	/* --------- Public functions --------- */
 public:
-	NetworkSetup(std::string &&ssid, RoutesList &&routes);
+	NetworkSetup(std::string &&ssid, RoutesList &&routes = {SELECT_NETWORK_ROUTE, FINISH_ROUTE});
 	void begin();
 	void reset();
 	bool is_setup() const;

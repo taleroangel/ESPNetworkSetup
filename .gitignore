@@ -6,3 +6,4 @@
 .vscode/ipch
 *.code-workspace
 /.vscode/
+/data/
