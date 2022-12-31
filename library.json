@@ -1,0 +1,27 @@
+{
+	"name": "ESPNetworkSetup",
+	"version": "1.0.0",
+	"keywords": "wifi, wi-fi, wifimanager, setupmanager",
+	"description": "Initial Setup manager for ESP boards",
+	"authors": [
+		{
+			"name": "taleroangel",
+			"url": "https://github.com/taleroangel"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/taleroangel/ESPNetworkSetup"
+	},
+	"frameworks": "arduino",
+	"platforms": [
+		"espressif8266",
+		"espressif32"
+	],
+	"libraries": [
+		"me-no-dev/ESP Async WebServer@^1.2.3",
+		"devyte/ESPAsyncDNSServer@^1.0.0",
+		"me-no-dev/ESPAsyncUDP@0.0.0-alpha+sha.697c75a025",
+		"bblanchon/ArduinoJson@^6.19.4"
+	]
+}

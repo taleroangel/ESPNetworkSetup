@@ -68,11 +68,11 @@ private:
 
 public:
 	/* --------- Servers --------- */
-	AsyncWebServer server;
-	AsyncDNSServer dns;
+	AsyncWebServer server; /**< HTTP Server, it is public so you can add your own routes */
+	AsyncDNSServer dns;	   /**< DNS Server, public if you need to tweek it */
 
 	/* --------- Tickers --------- */
-	Ticker network_discovery_ticker{};
+	Ticker network_discovery_ticker{}; /**< Periodically check networks, loops can block it and yield() won't solve it, so it's public in order to manually trigger it*/
 
 private:
 	/* --------- Routes --------- */
